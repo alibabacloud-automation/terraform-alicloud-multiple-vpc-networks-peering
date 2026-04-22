@@ -49,12 +49,13 @@ module "complete" {
 | Name | Version |
 |------|---------|
 | <a name="requirement_terraform"></a> [terraform](#requirement\_terraform) | >= 0.13 |
+| <a name="requirement_alicloud"></a> [alicloud](#requirement\_alicloud) | >= 1.200.0 |
 
 ## Providers
 
 | Name | Version |
 |------|---------|
-| <a name="provider_alicloud"></a> [alicloud](#provider\_alicloud) | n/a |
+| <a name="provider_alicloud"></a> [alicloud](#provider\_alicloud) | >= 1.200.0 |
 
 ## Modules
 
@@ -64,20 +65,20 @@ No modules.
 
 | Name | Type |
 |------|------|
-| [alicloud_route_entry.route_vpc_a_to_vpc_b_ipv4](https://registry.terraform.io/providers/hashicorp/alicloud/latest/docs/resources/route_entry) | resource |
-| [alicloud_route_entry.route_vpc_a_to_vpc_b_ipv6](https://registry.terraform.io/providers/hashicorp/alicloud/latest/docs/resources/route_entry) | resource |
-| [alicloud_route_entry.route_vpc_b_to_vpc_a_ipv4](https://registry.terraform.io/providers/hashicorp/alicloud/latest/docs/resources/route_entry) | resource |
-| [alicloud_route_entry.route_vpc_b_to_vpc_a_ipv6](https://registry.terraform.io/providers/hashicorp/alicloud/latest/docs/resources/route_entry) | resource |
-| [alicloud_vpc.default](https://registry.terraform.io/providers/hashicorp/alicloud/latest/docs/resources/vpc) | resource |
-| [alicloud_vpc_peer_connection.default](https://registry.terraform.io/providers/hashicorp/alicloud/latest/docs/resources/vpc_peer_connection) | resource |
-| [alicloud_account.current](https://registry.terraform.io/providers/hashicorp/alicloud/latest/docs/data-sources/account) | data source |
-| [alicloud_regions.current](https://registry.terraform.io/providers/hashicorp/alicloud/latest/docs/data-sources/regions) | data source |
+| [alicloud_route_entry.route_vpc_a_to_vpc_b_ipv4](https://registry.terraform.io/providers/aliyun/alicloud/latest/docs/resources/route_entry) | resource |
+| [alicloud_route_entry.route_vpc_a_to_vpc_b_ipv6](https://registry.terraform.io/providers/aliyun/alicloud/latest/docs/resources/route_entry) | resource |
+| [alicloud_route_entry.route_vpc_b_to_vpc_a_ipv4](https://registry.terraform.io/providers/aliyun/alicloud/latest/docs/resources/route_entry) | resource |
+| [alicloud_route_entry.route_vpc_b_to_vpc_a_ipv6](https://registry.terraform.io/providers/aliyun/alicloud/latest/docs/resources/route_entry) | resource |
+| [alicloud_vpc.default](https://registry.terraform.io/providers/aliyun/alicloud/latest/docs/resources/vpc) | resource |
+| [alicloud_vpc_peer_connection.default](https://registry.terraform.io/providers/aliyun/alicloud/latest/docs/resources/vpc_peer_connection) | resource |
+| [alicloud_account.current](https://registry.terraform.io/providers/aliyun/alicloud/latest/docs/data-sources/account) | data source |
+| [alicloud_regions.current](https://registry.terraform.io/providers/aliyun/alicloud/latest/docs/data-sources/regions) | data source |
 
 ## Inputs
 
 | Name | Description | Type | Default | Required |
 |------|-------------|------|---------|:--------:|
-| <a name="input_vpcs"></a> [vpcs](#input\_vpcs) | The parameters of vpcs. | <pre>object({<br>    vpc_name_prefix = optional(string, "vpc-peering")<br>    cidr_block      = list(string)<br>    ipv6_cidr_block = optional(list(string), [])<br>  })</pre> | <pre>{<br>  "cidr_block": []<br>}</pre> | no |
+| <a name="input_vpcs"></a> [vpcs](#input\_vpcs) | The parameters of vpcs. | <pre>object({<br/>    vpc_name_prefix = optional(string, "vpc-peering")<br/>    cidr_block      = list(string)<br/>    ipv6_cidr_block = optional(list(string), [])<br/>  })</pre> | <pre>{<br/>  "cidr_block": []<br/>}</pre> | no |
 
 ## Outputs
 
